@@ -19,10 +19,11 @@ img {
 
 #header {
   color: #ffd500;
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 50px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 #top-section {
@@ -38,6 +39,7 @@ img {
   height: 30px;
   font-size: large;
   padding-left: 10px;
+  border-radius: 50px;
 }
 
 ::placeholder {
@@ -49,9 +51,10 @@ img {
   background-color: black;
   color: white;
   padding: 10px 20px 10px 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   font-weight: 500;
   font-size: large;
+  border-radius: 50px;
 }
 
 #bottom-section {
@@ -64,6 +67,7 @@ img {
   justify-content: center;
   border: 2px solid #ffd500;
   opacity: 0.7;
+  border-radius: 50px;
 }
 
 #box-1 {
