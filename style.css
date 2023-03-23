@@ -2,6 +2,10 @@
   font-family: sans-serif;
 }
 
+body{
+  background-color: rgb(0, 129, 185);
+}
+
 #wallpaper-container {
   position: relative;
   display: flex;
