@@ -49,6 +49,7 @@ let maxTemp = document.getElementById('box-3-max')
 let API_KEY = "a8e71c9932b20c4ceb0aed183e6a83bb";
 
 const citySearch = async () => {
+	try{
 	const URL = "https://api.openweathermap.org/data/2.5/weather";
 	const FULL_URL = `${URL}?q=${searchResult.value}&appid=${API_KEY}&units=metric`;
 	let response = await fetch(FULL_URL)
@@ -60,6 +61,10 @@ const citySearch = async () => {
 		temp.innerText = `Temp: ${json.main.temp}℃`
 		minTemp.innerText = `Min Temp: ${json.main.temp_min}℃`
 		maxTemp.innerText = `Max Temp: ${json.main.temp_max}℃`
+	}catch (error){
+		cityName.innerHTML = 'ERROR'
+	}
+		
 }
 
 searchButton.onclick = () => citySearch()
