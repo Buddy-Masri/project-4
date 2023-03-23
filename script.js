@@ -6,13 +6,13 @@ let temp = document.getElementById('box-3-main')
 let minTemp = document.getElementById('box-3-min')
 let maxTemp = document.getElementById('box-3-max')
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '2d3c54a101msh8b6b1b88083dac9p1879dbjsnd483a45ba7b0',
-		'X-RapidAPI-Host': 'openweather43.p.rapidapi.com'
-	}
-};
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '2d3c54a101msh8b6b1b88083dac9p1879dbjsnd483a45ba7b0',
+// 		'X-RapidAPI-Host': 'openweather43.p.rapidapi.com'
+// 	}
+// };
 
 
 // const citySearch = () => {
