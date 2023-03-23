@@ -15,21 +15,33 @@ const options = {
 };
 
 
-const citySearch = () => {
-	fetch(`https://openweather43.p.rapidapi.com/weather?q=${searchResult.value}&appid=da0f9c8d90bde7e619c3ec47766a42f4&units=metric`, options)
-		.then(response => response.json())
-		.then(json => {
-			console.log(json)
-			cityName.innerHTML = json.name
-			WeatherStaus.innerHTML = json.weather[0].main
-			temp.innerText = `Temp: ${json.main.temp}℃`
-			minTemp.innerText = `Min Temp: ${json.main.temp_min}℃`
-			maxTemp.innerText = `Max Temp: ${json.main.temp_max}℃`
-		})
-	searchResult.value = null
+// const citySearch = () => {
+// 	fetch(`https://openweather43.p.rapidapi.com/weather?q=${searchResult.value}&appid=da0f9c8d90bde7e619c3ec47766a42f4&units=metric`, options)
+// 		.then(response => response.json())
+// 		.then(json => {
+// 			console.log(json)
+// 			cityName.innerHTML = json.name
+// 			WeatherStaus.innerHTML = json.weather[0].main
+// 			temp.innerText = `Temp: ${json.main.temp}℃`
+// 			minTemp.innerText = `Min Temp: ${json.main.temp_min}℃`
+// 			maxTemp.innerText = `Max Temp: ${json.main.temp_max}℃`
+// 		})
+// 	searchResult.value = null
+// }
+
+// searchButton.onclick = () => citySearch()
+
+const citySearch = async () => {
+	let response = await fetch(`https://openweather43.p.rapidapi.com/weather?q=${searchResult.value}&appid=da0f9c8d90bde7e619c3ec47766a42f4&units=metric`, options)
+	let json = await response.json()
+		console.log(json)
+		searchResult.value = null
+		cityName.innerHTML = json.name
+		WeatherStaus.innerHTML = json.weather[0].main
+		temp.innerText = `Temp: ${json.main.temp}℃`
+		minTemp.innerText = `Min Temp: ${json.main.temp_min}℃`
+		maxTemp.innerText = `Max Temp: ${json.main.temp_max}℃`
 }
 
 searchButton.onclick = () => citySearch()
-
-
 
