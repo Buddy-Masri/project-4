@@ -75,3 +75,4 @@ const citySearch = async () => {
 
 searchButton.onclick = () => citySearch()
 
+
