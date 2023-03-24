@@ -70,9 +70,37 @@ const citySearch = async () => {
 		minTemp.innerText = `Min Temp: ---`
 		maxTemp.innerText = `Max Temp: ---`
 	}
-		
+
 }
 
 searchButton.onclick = () => citySearch()
 
 
+// const getWeatherData = (city) => {
+// 	const URL = "https://api.openweathermap.org/data/2.5/weather";
+// 	const FULL_URL = `${URL}?q=${city}&appid=${API_KEY}&units=imperial`;
+// 	const weatherPromise = fetch(FULL_URL)
+// 	return weatherPromise.then(response =>
+// 		response.json())
+// }
+
+// showWeatherData = (weatherData) => {
+// 	cityName.innerHTML = weatherData.name
+// 	WeatherStaus.innerHTML = weatherData.weather[0].main
+// 	temp.innerText = `Temp: ${weatherData.main.temp}℃`
+// 	minTemp.innerText = `Min Temp: ${weatherData.main.temp_min}℃`
+// 	maxTemp.innerText = `Max Temp: ${weatherData.main.temp_max}℃`
+// }
+
+// const searchCity = () => {
+// 	const city = searchResult.value
+// 	getWeatherData(city)
+// 		.then(json => 
+// 			showWeatherData(json))
+// 			.catch(error=>{
+// 				console.log("Something happend");
+// 			})
+// }
+
+
+// searchButton.onclick = () => searchCity()
